@@ -3,7 +3,7 @@ volumes:
 
 
 services:
-  vivato:
+  mysql-local:
     image: mysql
     container_name: mysql_local_container
 
