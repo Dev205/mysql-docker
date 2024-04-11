@@ -5,6 +5,8 @@ volumes:
 services:
   vivato:
     image: mysql
+    container_name: mysql_local_container
+
     # Don't foget .env file for these vars
     environment:
       MYSQL_ROOT_PASSWORD: ${}
