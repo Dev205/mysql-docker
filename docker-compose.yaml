@@ -9,9 +9,9 @@ services:
 
     # Don't foget .env file for these vars
     environment:
-      MYSQL_ROOT_PASSWORD: ${}
-      MYSQL_DATABASE: ${}
-      MYSQL_PASSWORD: ${}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     restart: unless-stopped
     volumes:
       - db-data:/var/lib/mysql
