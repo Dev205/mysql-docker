@@ -1,0 +1,17 @@
+volumes:
+  db-data: {}
+
+
+services:
+  vivato:
+    image: mysql
+    # Don't foget .env file for these vars
+    environment:
+      MYSQL_ROOT_PASSWORD: ${}
+      MYSQL_DATABASE: ${}
+      MYSQL_PASSWORD: ${}
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
